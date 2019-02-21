@@ -2,7 +2,8 @@ package SinglyLinkedList;
 
 public class SinglyLinkedList {
 
-    private Node head;
+    private Node head=null;
+    private int size=0;
 
     private class Node{
         private int data;
