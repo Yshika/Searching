@@ -33,6 +33,7 @@ public class SinglyLinkedList {
         if(head!=null){
             size--;
             resp=temp.data;
+            this.head=this.head.next;
         }
         return resp;
     }
@@ -96,7 +97,7 @@ public class SinglyLinkedList {
             linkedlist.insert(i+1);
         }
         System.out.println(linkedlist);
-        linkedlist.remove(2);
+        linkedlist.remove(1);
         System.out.println(linkedlist);
     }
 }
