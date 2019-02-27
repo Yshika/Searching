@@ -92,5 +92,11 @@ public class SinglyLinkedList {
     }
     public static void main(String[] args) {
         SinglyLinkedList linkedlist=new SinglyLinkedList();
+        for (int i = 0; i < 5; i++) {
+            linkedlist.insert(i+1);
+        }
+        System.out.println(linkedlist);
+        linkedlist.remove(2);
+        System.out.println(linkedlist);
     }
 }
