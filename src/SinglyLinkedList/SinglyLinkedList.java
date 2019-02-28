@@ -64,6 +64,22 @@ public class SinglyLinkedList {
         }
         return resp;
     }
+    public boolean search(int data) {
+        boolean resp = true;
+        if (this.head == null) {
+            System.out.println("Linkedlist is empty");
+            return false;
+        }
+        Node temp = this.head;
+        while (temp.next != null) {
+            if (temp.data == data) {
+                resp = true;
+                break;
+            }
+            temp = temp.next;
+        }
+        return resp;
+    }
 
     public String toString(){
         StringBuilder result=new StringBuilder();
@@ -99,5 +115,6 @@ public class SinglyLinkedList {
         System.out.println(linkedlist);
         linkedlist.remove(1);
         System.out.println(linkedlist);
+        System.out.println(linkedlist.search(2));
     }
 }
