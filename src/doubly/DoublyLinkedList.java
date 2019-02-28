@@ -117,11 +117,16 @@ public class DoublyLinkedList {
     public static void main(String[] args) {
         DoublyLinkedList linkedList = new DoublyLinkedList();
         System.out.println(linkedList);
+        System.out.println(linkedList.removeHead());
+        System.out.println(linkedList.delete());
         for (int i = 0; i < 5; i++) {
             linkedList.insert(i + 1);
         }
+
         System.out.println(linkedList);
         System.out.println("Deleted: "+(linkedList.delete()));
+        System.out.println("Delete Head: "+linkedList.removeHead());
         System.out.println(linkedList);
+
     }
 }
