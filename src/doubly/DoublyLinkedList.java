@@ -42,19 +42,19 @@ public class DoublyLinkedList {
     @Override
     public String toString() {
         StringBuilder resp = new StringBuilder();
-        if(size==0){
+        if (size == 0) {
             resp.append("[]");
-        }else{
-        resp.append("[ null<==");
-        Node temp = this.head;
-        while (temp != null) {
-            resp.append(temp.data);
-            if (temp.next != null) {
-                resp.append("<==>");
+        } else {
+            resp.append("[ null<==");
+            Node temp = this.head;
+            while (temp != null) {
+                resp.append(temp.data);
+                if (temp.next != null) {
+                    resp.append("<==>");
+                }
+                temp = temp.next;
             }
-            temp = temp.next;
-        }
-        resp.append("==>null ]");
+            resp.append("==>null ]");
         }
         return resp.toString();
     }
@@ -89,27 +89,29 @@ public class DoublyLinkedList {
 
         }
     }
-    public int delete(){
-        int resp=-1;
-        if(head!=null){
-            Node temp=head;
-            while(temp.next!=null){
-                temp=temp.next;
+
+    public int delete() {
+        int resp = -1;
+        if (head != null) {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
             }
-            resp=temp.data;
-            temp=temp.prev;
-            temp.next=null;
+            resp = temp.data;
+            temp = temp.prev;
+            temp.next = null;
         }
         size--;
         return resp;
     }
-    private int removeHead(){
-        int resp=-1;
-        if(head!=null){
-            resp=head.data;
-            Node temp=head.next;
-            temp.prev=null;
-            head=temp;
+
+    private int removeHead() {
+        int resp = -1;
+        if (head != null) {
+            resp = head.data;
+            Node temp = head.next;
+            temp.prev = null;
+            head = temp;
         }
         return resp;
     }
@@ -124,8 +126,8 @@ public class DoublyLinkedList {
         }
 
         System.out.println(linkedList);
-        System.out.println("Deleted: "+(linkedList.delete()));
-        System.out.println("Delete Head: "+linkedList.removeHead());
+        System.out.println("Deleted: " + (linkedList.delete()));
+        System.out.println("Delete Head: " + linkedList.removeHead());
         System.out.println(linkedList);
 
     }
